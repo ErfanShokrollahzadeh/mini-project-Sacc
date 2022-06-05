@@ -6,6 +6,15 @@
     right: 5%;
     z-index: 300;
 
+    @media screen and (max-width:800px) {     
+        width: 35px;
+        height: 35px;
+    }
+     @media screen and (max-width:500px) {     
+        width: 25px;
+        height: 25px;
+    }
+
 
     .menu{
         @extend %fullSpace;
@@ -21,6 +30,13 @@
             background-color: $color-primary;
             transition: all 0.5s 0.5s;
             transform-origin: right;
+
+            @media screen and (max-width:800px) {     
+                height: 3px;
+            }
+            @media screen and (max-width:500px) {     
+                height: 2px;
+            }
         }
     }
 }
@@ -34,12 +50,45 @@
     margin-right: 20px;
     border: 3px solid $color-primary;
     border-radius: 50%;
+    text-decoration: none;
+
+    @media screen and (min-width: 1000px) {
+        font-size: 50px;
+        width: 90px;
+        height: 90px;
+    }
+    @media screen and(max-width:600px) {
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+    }
+    @media screen and (max-width:500px) {     
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
 }
 .main-name {
     font-family: $font-nunito;
     font-size: 50px;
     color: $color-secondery;
     @include textstyle;
+
+     @media screen and (min-width: 1000px) {
+        font-size: 40px;
+    }
+    @media screen and(max-width:800px) {
+        font-size: 35px;
+    }
+    @media screen and(max-width:600px) {
+        font-size: 30px;
+    }
+    @media screen and(max-width:500px) {
+        font-size: 25px;
+        text-align: center;
+    }
+    
 }
 .sub-name {
     font-family: $font-josefinsans;
@@ -47,6 +96,13 @@
     color: $color-secondery;
     text-align: center;
     @include textstyle;
+    
+    @media screen and(max-width:800px) {
+        font-size: 16px;
+    }
+    @media screen and(max-width:600px) {
+        font-size: 14px;
+    }
 }
 .main-heading{
     font-family: $font-dancingscript;
@@ -54,6 +110,19 @@
     font-weight: 300;
     color: $color-primary;
     margin-bottom: 40px;
+
+    @media screen and  (max-width:1600px) {     
+        font-size: 80px;
+    }
+
+    @media screen and  (max-width:1000px) {     
+        font-size: 60px;
+    }
+    @media screen and  (max-width:500px) {     
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
 }
 .sub-heading{
     font-family: $font-josefinsans;
@@ -61,6 +130,24 @@
     font-weight: 300;
     color: $color-secondery;
     margin-bottom: 80px;
+    text-align: center;
+
+    @media screen and  (max-width:1600px) {     
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+
+    @media screen and  (max-width:1300px) {     
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+     @media screen and  (max-width:1000px) {     
+        font-size: 30px;
+    }
+    @media screen and(max-width:500px) {
+        font-size: 25px;
+    }
 }
 .main-btn{
     width: 170px;
@@ -78,6 +165,16 @@
     &:hover{
         background-color: $color-primary;
         color: $color-dark;
+    }
+    @media screen and (max-width:800px) {     
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
+    @media screen and (max-width:500px) {     
+        width: 130px;
+        height: 30px;
+        font-size: 10px;
     }
 }
 .card{
@@ -106,14 +203,34 @@
 
         &-heading{
             font-family: $font-nunito;
-            font-size: 46px;
-            @include textstyle
+            font-size: 50px;
+            @include textstyle;
+
+            @media screen and (max-width:900px) {     
+                font-size: 35px;
+            }
+            @media screen and(max-width:600px) {
+                font-size: 25px;
+            }
+            @media screen and(max-width:500px) {
+                display: none;
+            }
         }
         &-paragraph{
             font-family: $font-dancingscript;
             font-size: 30px;
             margin-bottom: 30px;
-            @include textstyle
+            @include textstyle;
+
+            @media screen and (max-width:900px) {     
+                font-size: 20px;
+            }
+            @media screen and(max-width:600px) {
+                font-size: 15px;
+            }
+            @media screen and(max-width:500px) {
+                display: none;
+            }
         }
         &-btn{
             width: 150px;
@@ -127,9 +244,23 @@
             border-radius: 30px;
             outline: none;
             cursor: pointer;
+            @media screen and (max-width:900px) {     
+                font-size: 12px;
+                width: 130px;
+                height: 30px;
+            }
+            @media screen and(max-width:600px) {
+                font-size: 10px;
+                width: 100px;
+            }
+            @media screen and(max-width:500px) {
+                font-size: 10px;
+                width: 50px;
+            }
             &:hover{
                 background-color: rgb(255, 115, 0);
                 color: $color-white;
+
             }
         }
     }

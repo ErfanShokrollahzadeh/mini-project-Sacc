@@ -13,6 +13,10 @@
             left: -50vw;
             transition: left 0.8s cubic-bezier(1,0,0,1);
 
+            @media screen and (max-width:800px) {     
+                display: none;
+            }
+
             .left-img {
                 width: 50%;
                 position: absolute;
@@ -20,19 +24,38 @@
                 box-shadow: 0 15px 60px rgba($color-black,0.5);
                 opacity: .7;
                 border-radius: 10px;
+
+                 @media screen and (max-width:1300px) {     
+                    width: 55%;
+                }
+                @media screen and (max-width:1000px) {     
+                    width: 65%;
+                }
             }
 
             .left-img-1{
                 top: 15%;
                 left: 15%;
+
+                @media screen and (max-width:1000px) {     
+                    left: 5%;
+                }
             }
             .left-img-2{
                 top: 35%;
                 left: 25%;
+
+                @media screen and (max-width:1000px) {     
+                    left: 15%;
+                }
             }
             .left-img-3{
                 top: 55%;
                 left: 35%;
+
+                @media screen and (max-width:1000px) {     
+                    left: 20%;
+                }
             }
         }
         &-right {
@@ -43,6 +66,11 @@
             right: -50vw;
             @include flexlayout;
             transition: right 0.8s cubic-bezier(1,0,0,1);
+
+            @media screen and (max-width:800px) {     
+                width: 100vw;
+                right: -100vw;
+            }
         }
 
         .nav-list {
@@ -59,6 +87,10 @@
                 margin: 15px;
                 text-align: center;
                 transition: all 0.5s;
+
+                @media screen and (max-width:600px) {     
+                    font-size: 30px;
+                }
 
                 &:hover{
                     color: $color-primary;
@@ -98,6 +130,10 @@
         @include centering(15%);
         display: flex;
         align-items: center;
+
+        @media screen and(max-width:500px) {
+            @include centering(12%);
+        }
     }
     .header-baner{
         text-align: center;
@@ -109,8 +145,17 @@
     display: flex;
     align-items: center;
 
+     @media screen and(max-width:800px) {
+        height: 79vh;
+    }
+
     &-left{
         width: 40%;
+
+        @media screen and(max-width:800px) {
+            display: none;
+        }
+
         img{
             width: 100%;
             opacity: .7;
@@ -122,25 +167,71 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 60px;
+        padding: 0 80px;
         box-sizing: border-box;
+
+        @media screen and  (max-width:1300px) {     
+            padding: 0 50px;
+        }
+
+         @media screen and(max-width:800px) {
+            width: 100%;
+        }
 
         .main-heading{
             font-size: 60px;
             margin-bottom: 20px;
+
+            @media screen and  (max-width:1600px) {     
+                font-size: 80px;
+            }
+
+            @media screen and  (max-width:1000px) {     
+                font-size: 60px;
+            }
+            @media screen and  (max-width:500px) {     
+                font-size: 60px;
+                margin-bottom: 20px;
+            }
         }
         .sub-heading{
             font-size: 40px;
             margin-bottom: 20px;
+
+            @media screen and  (max-width:1600px) {     
+                font-size: 50px;
+                margin-bottom: 50px;
+            }
+
+            @media screen and  (max-width:1300px) {     
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+
+            @media screen and  (max-width:1000px) {     
+                font-size: 30px;
+            }
+            @media screen and  (max-width:500px) {     
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
         }
 
         .stars{
             margin: 30px 0px;
+
+            @media screen and  (max-width:1000px) {     
+                margin: 15px 0px;
+            }
         }
         .star{
             font-size: 15px;
             color: $color-primary;
             margin-left:10px;
+
+            @media screen and  (max-width:1000px) {     
+                font-size: 12px;
+            }
         }
 
         .description{
@@ -150,6 +241,14 @@
             text-align: justify;
             &::first-letter{
                 padding-left: 30px;
+            }
+
+            @media screen and (max-width:1600px) {     
+                font-size: 20px;
+            }
+
+            @media screen and (max-width:1000px) {     
+                font-size: 14px;
             }
         }
     }
@@ -167,6 +266,10 @@
     @include flexlayout;
     flex-direction: column;
 
+    @media screen and (max-width:500px) {     
+        padding: 40px 0px;
+    }
+
     &-header{
         display: flex;
         align-items: center;
@@ -177,6 +280,12 @@
         width: 300px;
         justify-content: space-between;
         margin-bottom: 50px;
+
+        @media screen and (max-width:500px) {     
+            width: 200px;
+            margin-bottom: 40px;
+        }
+
         
         &-item{
             list-style: none;
@@ -190,6 +299,11 @@
             &:hover{
                 color: $color-primary;
             }
+
+
+            @media screen and (max-width:1000px) {     
+                font-size: 35px;
+            }
             
         }
         
@@ -198,6 +312,15 @@
         font-family: $font-josefinsans;
         font-size: 20px;
         color: $color-secondery;
+
+         @media screen and(max-width:800px) {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+         @media screen and (max-width:500px) {     
+           font-size: 14px;
+        }
     }
 
 }
